@@ -1,0 +1,22 @@
+{
+  "name": "空調負荷計算 × 多廠牌選機",
+  "short_name": "空調負荷選機",
+  "description": "空調熱負荷計算、多廠牌選機及節能法規提醒",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e6f5f9",
+  "theme_color": "#073866",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
