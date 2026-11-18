@@ -1,0 +1,10 @@
+空調負荷計算與多廠牌自動選機 V0.3
+
+GitHub Pages 上傳說明：
+1. 解壓縮本 ZIP。
+2. 在 GitHub 儲存庫根目錄上傳 index.html。
+3. 開啟 Settings > Pages，Source 選 Deploy from a branch；Branch 選 main、/(root)，按 Save。
+4. 發佈後使用 https://帳號.github.io/儲存庫名稱/ 開啟。
+
+附加：空調廠牌冷房能力資料庫.csv 供型錄資料維護參考，不必一起上傳網站。
+注意：網頁的本機儲存資料不會跨裝置同步。
