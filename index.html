@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>空調負荷計算 × 多廠牌選機｜V1.1</title><style>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>空調負荷計算 × 多廠牌選機｜V1.2</title><style>
 :root{font-family:system-ui,'Microsoft JhengHei',sans-serif;color:#223044;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}.top{background:#122b48;color:white;padding:22px max(18px,calc((100vw - 1200px)/2))}.top h1{margin:0;font-size:23px}.top p{margin:6px 0 0;color:#c2d5e8;font-size:13px}.wrap{max-width:1200px;margin:auto;padding:22px 16px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px}.tabs button{border:1px solid #cbd5e1;background:white;padding:10px 15px;color:#31506b;border-radius:9px;cursor:pointer}.tabs button.active{background:#176b83;color:white;border-color:#176b83}.panel{background:white;border:1px solid #e1e8ee;border-radius:13px;padding:19px;margin-bottom:16px;box-shadow:0 3px 12px #1a33500a}.panel h2{font-size:18px;margin:0 0 13px}.hint{font-size:12px;color:#697b8a}.formgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#496273}input,select{padding:10px;border:1px solid #cbd7e2;border-radius:7px;width:100%;background:#fff;color:#192e3d;font-size:14px}button{cursor:pointer}.btn{background:#126b80;color:white;border:0;border-radius:7px;padding:10px 14px}.btn.secondary{background:#ecf5f8;color:#14667a}.btn.danger{background:#fff1f0;color:#b44a4a}.buttons{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.scroll{overflow:auto}.data{border-collapse:collapse;width:100%;min-width:1000px;font-size:13px}.data th{background:#eff4f8;text-align:left;color:#446072;padding:10px 8px;white-space:nowrap}.data td{padding:8px;border-bottom:1px solid #e8edf1;white-space:nowrap}.data input,.data select{min-width:90px;padding:7px;font-size:13px}.data input.room{min-width:150px}.data input.small{min-width:74px;width:80px}.data select.machine{min-width:220px;max-width:260px}.data select.brand{min-width:120px;max-width:170px}.data input.manualkw{min-width:112px;width:118px}.manualhint{font-size:11px;color:#99681b;display:block;margin-top:3px}.ok{color:#0b8b5d;font-weight:700}.warn{color:#bc701c;font-weight:700}.bad{color:#c14444;font-weight:700}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.stat{background:#eff7f9;border-radius:9px;padding:13px}.stat b{display:block;font-size:23px;color:#175d70;margin-top:4px}.stat span{font-size:12px;color:#527185}.notice{background:#fff8e9;border-left:3px solid #db963e;padding:10px 12px;margin:12px 0;font-size:13px;color:#7b5b23}.hidden{display:none}#notice{min-height:18px;color:#146c61;font-size:13px}.catalog-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.pill{font-size:12px;padding:4px 8px;background:#eaf1f5;border-radius:7px}.foot{font-size:12px;color:#63778a;line-height:1.7}@media(max-width:700px){.formgrid,.stats,.catalog-form{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:13px}.top{padding:18px}.top h1{font-size:20px}}@media(max-width:460px){.formgrid,.catalog-form{grid-template-columns:1fr}}
 
 .compliance-intro{background:#eaf5fb;border-left:4px solid #247eaa;padding:13px 16px;line-height:1.8;border-radius:8px;font-size:13px}
@@ -7,7 +7,7 @@
 .rule-links a{color:#116585}.data .ctemp{min-width:85px;width:100px}.tag{display:inline-block;padding:3px 8px;background:#f1f4f7;border-radius:20px;font-size:12px}
 @media print{.tabs,.buttons,button{display:none!important}.panel.hidden{display:block!important}.top{background:white;color:black}.wrap{max-width:none}}
 
-/* V1.1 UI polish: all functional JavaScript and data remain unchanged. */
+/* V1.2 UI polish: all functional JavaScript and data remain unchanged. */
 :root{font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#18364e;background:#d9f5f8;--navy:#073866;--teal:#009bab;--ink:#16364d;--line:#dbe9f0}
 body{background:radial-gradient(ellipse at 94% 36%,rgba(95,223,224,.46),transparent 44%),radial-gradient(ellipse at 4% 72%,rgba(115,203,231,.42),transparent 45%),linear-gradient(160deg,#dceffb 0%,#edf9fc 48%,#d0f1ed 100%);min-height:100vh}
 .top{position:relative;isolation:isolate;overflow:hidden;padding:0 22px;color:white;background:linear-gradient(115deg,#052c57 2%,#094471 52%,#0f9caa 100%);box-shadow:0 12px 30px rgba(0,52,89,.18)}
@@ -46,13 +46,13 @@ body{background:radial-gradient(ellipse at 94% 36%,rgba(95,223,224,.46),transpar
 }
 
 
-/* V1.1 one-space / multi-system capacity allocation */
+/* V1.2 one-space / multi-system capacity allocation */
 .alloc-intro{background:linear-gradient(120deg,#e8f8ff,#eafbf6);border:1px solid #bfe9e8;padding:14px 16px;border-radius:12px;margin:14px 0;line-height:1.75;color:#174d64;font-size:13px}
 .alloc-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0 16px}.alloc-room{background:#f4f9fd;border:1px solid #dce9f1;border-radius:14px;padding:13px 14px;margin:14px 0}.alloc-room h3{margin:0 0 9px;font-size:16px;color:#154a6b}.alloc-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.alloc-meta span{font-size:12px}.alloc-grid{display:grid;grid-template-columns:1fr 1fr 1.4fr 1.2fr 1.4fr 1fr 1fr 1fr auto;gap:9px;align-items:end;margin-top:10px}.alloc-grid .field{min-width:0}.alloc-grid select,.alloc-grid input{width:100%;min-width:0}.alloc-grid .btn{min-width:48px;padding:10px 8px}.alloc-total{font-weight:700;color:#1b6377}.alloc-status{font-size:12px;line-height:1.6;margin-top:10px}.system-table{min-width:840px}.system-table .btn{white-space:nowrap}.system-list .data{min-width:780px}.allocation-help{font-size:12px;color:#567486;line-height:1.75}.mini-badge{display:inline-block;padding:4px 10px;border-radius:100px;background:#e2f2fb;color:#215977;font-size:12px}.mini-badge.bad{background:#ffebeb;color:#a22}.mini-badge.ok{background:#d9f5e5;color:#087448}.alloc-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.alloc-summary>div{background:#f3fbfd;border:1px solid #d5edf0;border-radius:12px;padding:13px}.alloc-summary b{display:block;font-size:22px;margin-top:6px}.allocation-action{white-space:nowrap}
 @media(max-width:1100px){.alloc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.alloc-grid .allocation-action{align-self:end}}
 @media(max-width:620px){.alloc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.alloc-grid .field{font-size:12px}.alloc-grid .field.wide{grid-column:span 2}.alloc-summary{grid-template-columns:1fr}.alloc-room{padding:12px}.alloc-room h3{font-size:15px}}
 
-/* V1.1 連結率與HP試算，型錄日常隱藏 */
+/* V1.2 連結率與HP試算，型錄日常隱藏 */
 .catalog-admin-entry{display:flex;justify-content:space-between;align-items:center;gap:16px;background:linear-gradient(110deg,#e9f9f9,#ecf3fc);border:1px solid #cae5ed;border-radius:14px;padding:14px 18px;margin:5px 0 18px}
 .catalog-admin-entry p{margin:5px 0 0}.hp-explainer{line-height:1.85;color:#244e64;background:#ebf7fa;border:1px solid #c5e3ec;border-left:4px solid #0e9ca7;padding:14px 17px;border-radius:12px;margin:12px 0 20px;font-size:13px}
 .hp-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
@@ -65,7 +65,10 @@ body{background:radial-gradient(ellipse at 94% 36%,rgba(95,223,224,.46),transpar
 
 .auto-outdoor-message{margin:12px 0;padding:12px 14px;border:1px solid #bce3da;border-radius:10px;background:#ebfaf5;font-size:13px;line-height:1.6}
 .auto-outdoor-message.warn{border-color:#f1d5a7;background:#fff8e9}
-</style><meta name="theme-color" content="#083765"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="空調負荷選機"><meta name="application-name" content="空調負荷選機"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=3"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=3"><link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=3"><link rel="manifest" href="./manifest.webmanifest"></head><body><header class="top"><div class="top-inner"><div class="top-eyebrow"><span class="snowflake">❄</span> 空調工程計算平台 <span class="top-divider">│</span> 智慧工程設計工具 <span class="version">V1.1</span></div><div class="hero-main"><div class="hero-copy"><div class="hero-icon">▣ <span>﹏</span></div><h1>空調負荷計算 <span class="hero-multiply">×</span> 多廠牌選機</h1><p>從空間負荷計算、廠牌型錄匹配到設備數量統計，一站完成初步空調系統規劃。</p><div class="hero-tags"><span>✓ 分離式</span><span>✓ VRV / VRF</span><span>✓ 冰水系統</span><span>✓ 多廠牌型錄</span><span>✓ 26°C 節能提醒</span></div></div><div class="hero-art" aria-hidden="true"><div class="air-unit"><i></i><i></i><i></i><b>HVAC</b></div><div class="fan-unit"><div class="fan-circle">✳</div><div class="fan-circle">✳</div></div><div class="flow-lines"></div></div></div></div></header><main class="wrap"><div class="tabs" role="navigation" aria-label="主要功能分頁"><button class="active" data-tab="rooms">▦ &nbsp;空間與負荷</button><button data-tab="match">▱ &nbsp;系統選機</button><button data-tab="compliance">♧ &nbsp;節能法規檢核</button><button data-tab="report">▥ &nbsp;統計與匯出</button></div>
+
+/* V1.2: temperature comparison and clearly identified optional sensitivity model */
+.scenario-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:14px 0}.scenario-action{display:flex;flex-direction:column;justify-content:end;gap:7px}.scenario-summary{background:linear-gradient(120deg,#e6f5fc,#eafaf5);border:1px solid #bcdde9;padding:14px;border-radius:12px;margin:14px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.scenario-summary div{padding:8px}.scenario-summary small{display:block;color:#526d81;margin-bottom:5px}.scenario-summary strong{font-size:20px;color:#126b83}.scenario-note{background:#fff8e8;border:1px solid #f3db9c;border-radius:8px;padding:9px 12px;font-size:12px;line-height:1.7}.scenario-pos{color:#0c855e;font-weight:700}.scenario-neg{color:#bd6e17;font-weight:700}@media(max-width:720px){.scenario-controls,.scenario-summary{grid-template-columns:1fr}}
+</style><meta name="theme-color" content="#083765"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="空調負荷選機"><meta name="application-name" content="空調負荷選機"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=3"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png?v=3"><link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=3"><link rel="manifest" href="./manifest.webmanifest"></head><body><header class="top"><div class="top-inner"><div class="top-eyebrow"><span class="snowflake">❄</span> 空調工程計算平台 <span class="top-divider">│</span> 智慧工程設計工具 <span class="version">V1.2</span></div><div class="hero-main"><div class="hero-copy"><div class="hero-icon">▣ <span>﹏</span></div><h1>空調負荷計算 <span class="hero-multiply">×</span> 多廠牌選機</h1><p>從空間負荷計算、廠牌型錄匹配到設備數量統計，一站完成初步空調系統規劃。</p><div class="hero-tags"><span>✓ 分離式</span><span>✓ VRV / VRF</span><span>✓ 冰水系統</span><span>✓ 多廠牌型錄</span><span>✓ 26°C 節能提醒</span></div></div><div class="hero-art" aria-hidden="true"><div class="air-unit"><i></i><i></i><i></i><b>HVAC</b></div><div class="fan-unit"><div class="fan-circle">✳</div><div class="fan-circle">✳</div></div><div class="flow-lines"></div></div></div></div></header><main class="wrap"><div class="tabs" role="navigation" aria-label="主要功能分頁"><button class="active" data-tab="rooms">▦ &nbsp;空間與負荷</button><button data-tab="match">▱ &nbsp;系統選機</button><button data-tab="compliance">♧ &nbsp;節能法規檢核</button><button data-tab="report">▥ &nbsp;統計與匯出</button></div>
 <section id="rooms" class="panel"><h2>01　案件與空間負荷</h2><div class="formgrid"><label class="field">案件名稱<input id="project" placeholder="例如：○○辦公室空調改善"></label><label class="field">樓層／區域<input id="floor" placeholder="例如：1F"></label><label class="field">面積單位<select id="areaUnit"><option value="ping">坪</option><option value="m2">m²</option></select></label><label class="field">負荷單位<select id="loadUnit"><option value="kcal">kcal/h／坪或m²</option><option value="kw">kW／坪或m²</option></select></label></div><div class="notice">設計負荷與設備型錄應採相同設計條件。初版採用原表 1 kW ≈ 860 kcal/h；原表冰水容量以 1 RT = 3000 kcal/h 計，僅供延續原計算方式。<br><b>多系統配置：</b>本頁的系統類別、廠牌、系統編號為新空間的預設值；一個空間要分配 S1／S2 或不同類別，請按最右側「配置系統」，在下一頁設定每套配機的分配負荷與室外機。</div><div class="buttons"><button class="btn" onclick="addRoom()">＋ 新增空間</button><button class="btn secondary" onclick="duplicateLast()">複製上一筆</button></div><div class="scroll"><table class="data"><thead><tr><th>室名</th><th>面積</th><th>負荷密度</th><th>預設系統類別</th><th>預設廠牌</th><th>預設編號</th><th>負荷 kW</th><th>負荷 kcal/h</th><th>操作</th></tr></thead><tbody id="roomRows"></tbody></table></div></section>
 <section id="match" class="panel hidden"><h2>02　自動選機及手動指定</h2><p class="hint">第一頁輸入面積與熱負荷後，先選廠牌，系統會依該廠牌自動選出符合需求的最小型錄冷房能力與機型；也可手動改選機型、冷房 kW 或台數。更換廠牌／機型會清除該筆手動 kW，重新讀取型錄。系統編號用於 VRF 外機分組。</p><div class="scroll"><table class="data"><thead><tr><th>室名／系統</th><th>需求 kW</th><th>先選廠牌</th><th>建議／指定室內機</th><th>單台冷房 kW（可手改）</th><th>台數</th><th>總容量 kW</th><th>容量裕度 %</th><th>判斷</th></tr></thead><tbody id="matchRows"></tbody></table></div><h2 style="margin-top:24px">VRV / VRF 室外機分組</h2><p class="hint">請在下面輸入各系統室外機的「型錄額定冷房能力 kW」，即可計算室內機額定容量總和／室外機額定容量的名目連結率。此值不是廠牌的實際能力修正或可連接性保證。</p><div class="scroll"><table class="data"><thead><tr><th>系統編號</th><th>室內機額定合計 kW</th><th>外機型號（手填）</th><th>外機額定 kW</th><th>名目連結率</th><th>狀態</th></tr></thead><tbody id="outdoorRows"></tbody></table></div></section>
 <section id="catalog" class="panel hidden"><button class="btn secondary" onclick="closeCatalogAdmin()" style="float:right">← 返回統計報表</button><h2>型錄資料庫｜管理模式</h2><p class="hint">已整合五份型錄部分已核對的具體機型及冷房 kW，並保留原 Excel 示範容量。每筆標示來源年度及頁碼；型錄尚未全部逐項建檔。正式型錄可逐筆新增，亦可透過 CSV 大量匯入。冰水原表僅有風量級，未填實際冷房能力前不會參與自動選機。</p><div class="catalog-form"><label class="field">廠牌<input id="cbrand" placeholder="例：大金"></label><label class="field">系統<select id="ctype"><option>分離式</option><option>VRF</option><option>冰水</option></select></label><label class="field">系列<input id="cseries" placeholder="例：吊隱式"></label><label class="field">型號<input id="cmodel" placeholder="完整型號"></label><label class="field">額定冷房能力 kW<input type="number" id="ckw" min="0" step="0.01" placeholder="例如 5.6"></label><label class="field">風量 CMH（選填）<input type="number" id="cair" min="0" placeholder="例如 800"></label></div><div class="buttons"><button class="btn" onclick="addCatalog()">＋ 新增型錄規格</button><button class="btn secondary" onclick="document.getElementById('csvFile').click()">匯入型錄 CSV</button><button class="btn secondary" onclick="catalogTemplate()">下載 CSV 範本</button><input id="csvFile" type="file" accept=".csv,text/csv" hidden onchange="importCSV(this)"></div><div class="formgrid" style="margin:12px 0"><label class="field">查詢廠牌或型號<input id="csearch" oninput="renderCatalog()" placeholder="輸入關鍵字"></label><label class="field">篩選類別<select id="cfilter" onchange="renderCatalog()"><option value="">全部</option><option>分離式</option><option>VRF</option><option>冰水</option></select></label></div><div class="scroll"><table class="data"><thead><tr><th>廠牌</th><th>系統</th><th>系列</th><th>型號</th><th>能力 kW</th><th>風量 CMH</th><th>備註</th><th>操作</th></tr></thead><tbody id="catalogRows"></tbody></table></div></section>
@@ -73,8 +76,8 @@ body{background:radial-gradient(ellipse at 94% 36%,rgba(95,223,224,.46),transpar
 <div class="compliance-intro"><b>適用原則：</b>指定的供公眾出入營業場所，室內冷氣平均溫度原則上不得低於 <b>26°C</b>，但有法定例外。這是<b>營運／現場檢查</b>規範，不是規定所有工程都必須以 26°C 做冷房負荷設計。此頁是設計階段的提醒，不代表官方檢驗或合規認證。</div>
 <div class="formgrid" style="margin-top:16px"><label class="field">案件營業場所適用狀態<select id="lawScope" onchange="updateCompliance('lawScope',this.value)"><option value="unknown">尚未確認適用</option><option value="designated">屬指定營業場所</option><option value="other">非指定營業場所／其他用途</option></select></label><label class="field">設計用室內溫度參考 °C<input type="number" id="lawDefaultTemp" min="10" max="40" step="0.5" onchange="updateCompliance('lawDefaultTemp',this.value)"></label><label class="field">適用場所類別<input id="lawVenue" placeholder="例如：辦公室、餐館、量販店" onchange="updateCompliance('lawVenue',this.value)"></label><label class="field">法規覆核人員／備註<input id="lawReviewer" placeholder="記錄覆核人員或說明" onchange="updateCompliance('lawReviewer',this.value)"></label></div>
 <div class="compliance-alert"><b>例外情形（應依現場事實認定）：</b>室外溫度低於 26°C；室外相對濕度高於 85%；餐館／附設餐廳指定時段；運動、健身、舞蹈、表演或沐浴活動期間；旅館客房入住期間。例外不等於永久豁免。<br><b>檢查方式：</b>依各單一空調空間取樣，量測平均室溫；作業要點規定平均值容許誤差 1°C，這是現場判定程序，<b>不是設計溫度可以直接設為 25°C 的許可</b>。</div>
-<h2>各空間設計溫度提醒</h2><p class="hint">在下表填寫各空間「設計室內溫度」，不會自動改變既有熱負荷密度或已選機型。若設計溫度變更，須由設計人員重新檢討負荷計算與設備能力。</p>
-<div class="scroll"><table class="data"><thead><tr><th>室名</th><th>系統</th><th>設計室溫 °C</th><th>需求 kW</th><th>提示／檢核</th></tr></thead><tbody id="lawRoomRows"></tbody></table></div>
+<h2>設計溫度與冷房負荷情境比較</h2><p class="hint">調整溫度後會立即顯示溫差與法規判斷；要估算負荷變動，請輸入有工程依據的「每升高 1°C 減少的顯熱負荷 kW」。未輸入時不會捏造新的負荷值，也不會擅自修改既有選機。</p><div id="scenarioControls" class="scenario-controls"><label class="field">原始負荷採用的參考室溫 °C<input type="number" id="scenarioBaseTemp" value="26" min="10" max="40" step="0.5" onchange="updateScenarioBase(this.value)"></label><label class="field">全案顯熱溫差敏感度（kW／°C，選填）<input type="number" id="scenarioSlope" min="0" step="0.01" placeholder="需有工程計算依據" onchange="updateScenarioSlope(this.value)"></label><div class="scenario-action"><button class="btn secondary" onclick="applyProjectTemp()">將上方溫度套用各空間</button><span class="hint">只更改設計溫度，不改原負荷及設備</span></div></div><div class="scenario-summary" id="scenarioSummary"></div>
+<div class="scroll"><table class="data"><thead><tr><th>室名</th><th>系統</th><th>設計室溫 °C</th><th>與基準差 °C</th><th>原始負荷 kW</th><th>試算負荷 kW</th><th>負荷差異</th><th>提示／檢核</th></tr></thead><tbody id="lawRoomRows"></tbody></table></div>
 <div id="lawSummary" class="notice"></div>
 <h2>法規條文與設計檢核</h2><div class="rule-links"><b>主要依據：</b><br><a target="_blank" rel="noopener" href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130002">能源管理法（115/09/23 修正）</a>：第 8 條、第 19-1 條、第 21 條、第 24 條。<br><a target="_blank" rel="noopener" href="https://law.moea.gov.tw/LawContent.aspx?id=FL070645">室內冷氣溫度限值現場檢查程序作業要點</a>：限值、適用對象、例外及測量程序；115/04/16 修正，115/10/27 另公告修正檢查表單。<br><b>罰則提醒：</b>違反節約能源規定經限期改善仍未改善，依第 21 條可處 10–50 萬元；規避、妨礙、拒絕檢查或提供不實資料，依第 24 條可處 15–75 萬元，均須依實際法定構成要件與程序判斷。<br>本頁顯示的是設計階段風險提醒，最終仍須確認現行公告、指定用戶類型、現場例外與正式檢測結果。</div>
 </section>
@@ -132,12 +135,12 @@ function renderAll(){syncAutoMatches();renderRooms();renderMatch();renderCatalog
 </script><script>
 
 (function(){
-  // V1.1 migration: original space rows and catalog remain untouched.
+  // V1.2 migration: original space rows and catalog remain untouched.
   const oldRenderRooms=renderRooms, oldRemoveRoom=removeRoom, oldUpdateRoom=updateRoom;
   const oldAddRoom=addRoom, oldDuplicateLast=duplicateLast;
   const matchEl=document.getElementById('match');
   matchEl.innerHTML=`<h2>02　多系統分配與自動選機</h2>
-    <div class="alloc-intro"><b>V1.1：室內機自動匹配與廠牌同步修正。</b><br>第二頁未選廠牌的配置會優先繼承第一頁同類型空間的指定廠牌；若廠牌僅建檔較大型室內機（例如萬士益 VRF 11.2 kW 起），會標記容量偏大，並不虛構小型號。<br><b>新增：一個空間可以搭配多套系統；多個空間也能共用同一套系統。</b><br>先在「空間與負荷」輸入總需求 kW，再於此頁分配每套系統負責的 kW；各分配負荷加總應等於該空間需求。VRV／VRF 室外機可在下方新增多台，系統額定容量會自動合計。分離式的不同系統應分開編號；室內外機配對需依型錄確認。</div>
+    <div class="alloc-intro"><b>V1.2：室內機自動匹配與廠牌同步修正。</b><br>第二頁未選廠牌的配置會優先繼承第一頁同類型空間的指定廠牌；若廠牌僅建檔較大型室內機（例如萬士益 VRF 11.2 kW 起），會標記容量偏大，並不虛構小型號。<br><b>新增：一個空間可以搭配多套系統；多個空間也能共用同一套系統。</b><br>先在「空間與負荷」輸入總需求 kW，再於此頁分配每套系統負責的 kW；各分配負荷加總應等於該空間需求。VRV／VRF 室外機可在下方新增多台，系統額定容量會自動合計。分離式的不同系統應分開編號；室內外機配對需依型錄確認。</div>
     <div id="allocSummary" class="alloc-summary"></div><div id="allocRooms"></div>
     <h2 style="margin-top:26px">VRV／VRF 室外機系統配置與 HP 試算</h2><p class="allocation-help">不同空間若使用相同系統編號與廠牌，將加總室內機額定容量。同一套系統可新增多台室外機（僅計算名目總容量；不代表廠商允許並聯），每台可獨立選型、輸入容量及台數。不同廠牌不可視為同一套系統。系統編號例如 S1、S2、VRF-A。</p>
     <div class="hp-explainer"><strong>室外機 HP 智慧試算</strong><br>依各系統室內機額定容量、您設定的「試算目標連結率」估算總室外機 HP，並提供常見 8／10／12／14／16／18／20 HP 模組組合。依本次上傳之《大里農會空調熱負荷計算書》試算基準為 <b>1 HP ≈ 2.8 kW</b>，不是所有廠牌通用的正式能力值。實際選型請以廠牌型錄 kW 為準。</div><div id="vrfSystems" class="system-list"></div>
@@ -155,7 +158,7 @@ function renderAll(){syncAutoMatches();renderRooms();renderMatch();renderCatalog
       if(!state.allocations.some(a=>a.roomId===r.id))state.allocations.push({id:token(),roomId:r.id,type:r.type||'分離式',brand:r.brand||'',sys:r.sys||'S1',need:loadKw(r),selected:'',manualKw:'',qty:1,qtyManual:false});
     }
     state.allocations=state.allocations.filter(a=>state.rooms.some(r=>r.id===a.roomId));
-    // V1.1 migration: an empty allocation brand inherits its parent room brand.
+    // V1.2 migration: an empty allocation brand inherits its parent room brand.
     // Explicitly configured different brands are never overwritten.
     for(const a of state.allocations){
       const room=state.rooms.find(r=>r.id===a.roomId);
@@ -402,4 +405,52 @@ if(r&&['area','density'].includes(k)){const aa=state.allocations.filter(a=>a.roo
   renderAll();save();
 })();
 
-</script></body></html>
+</script>
+<script>
+/* V1.2 add-on: isolated scenario analysis, preserves original load calculations */
+(function(){
+  function n(v){return Number(v)}
+  function val(v){return v===''||v===undefined||v===null?null:Number(v)}
+  function f(v){return Number(v).toFixed(2)}
+  function init(){
+    state.compliance ||= {};
+    if(state.compliance.scenarioBaseTemp===undefined)state.compliance.scenarioBaseTemp=26;
+    if(state.compliance.scenarioSlope===undefined)state.compliance.scenarioSlope='';
+  }
+  function renderScenario(){
+    init();
+    const c=state.compliance, base=val(c.scenarioBaseTemp), slope=val(c.scenarioSlope), validSlope=slope!==null&&Number.isFinite(slope)&&slope>=0;
+    const b=document.getElementById('scenarioBaseTemp'),sl=document.getElementById('scenarioSlope');
+    if(b&&document.activeElement!==b)b.value=c.scenarioBaseTemp;
+    if(sl&&document.activeElement!==sl)sl.value=c.scenarioSlope;
+    let totalOriginal=0,totalTrial=0,hasTemps=0,under=0;
+    const rows=state.rooms.map(r=>{
+      const original=loadKw(r),t=val(r.designTemp),dt=t===null||base===null?null:t-base;
+      totalOriginal+=original;
+      if(t!==null)hasTemps++;
+      const law=c.lawScope==='designated'&&t!==null&&t<26;
+      if(law)under++;
+      const trial=dt!==null&&validSlope?Math.max(0, original-slope*dt):null;
+      if(trial!==null)totalTrial+=trial;
+      let msg=t===null?'尚未輸入設計溫度':law?'低於指定場所一般 26°C 營運限值；請核對例外':c.lawScope==='unknown'?'尚未確認是否適用指定場所規範':c.lawScope==='other'?'非指定場所：仍須檢查其他節能要求':'設計溫度記錄完成；非現場合規認證';
+      const delta=trial===null?null:trial-original;
+      return `<tr><td>${esc(r.name)}</td><td>${esc(r.type)}</td><td><input class="ctemp" type="number" min="10" max="40" step="0.5" value="${t===null?'':t}" onchange="updateDesignTemp('${r.id}',this.value)"></td><td>${dt===null?'—':(dt>0?'+':'')+dt.toFixed(1)}</td><td>${f(original)}</td><td>${trial===null?'待輸入敏感度':f(trial)}</td><td class="${delta===null?'':delta<0?'scenario-pos':'scenario-neg'}">${delta===null?'—':(delta>0?'+':'')+f(delta)+' kW'}</td><td class="${law?'bad':'warn'}">${esc(msg)}</td></tr>`;
+    });
+    const tbody=document.getElementById('lawRoomRows');
+    if(tbody)tbody.innerHTML=rows.join('')||'<tr><td colspan="8">尚無空間</td></tr>';
+    const complete=hasTemps===state.rooms.length&&validSlope&&base!==null;
+    const summary=document.getElementById('scenarioSummary');
+    if(summary) summary.innerHTML=`<div><small>原始設計負荷</small><strong>${f(totalOriginal)} kW</strong></div><div><small>情境試算負荷</small><strong>${complete?f(totalTrial)+' kW':'尚無完整試算'}</strong></div><div><small>兩者差異</small><strong>${complete?(totalTrial-totalOriginal>0?'+':'')+f(totalTrial-totalOriginal)+' kW':'—'}</strong></div><div style="grid-column:1/-1" class="scenario-note">此情境試算公式：Q新 = max(0, Q原 − 敏感度 ×（設計室溫 − 原始參考室溫）)。敏感度必須來自您的外殼／新風顯熱計算；不包含潛熱、濕度、人員、設備等可能的變化。<b>情境試算不會更動選機容量、原始負荷或 VRF 配機。</b></div>`;
+    const overall=document.getElementById('lawSummary');
+    if(overall)overall.textContent=`已記錄 ${state.rooms.length} 個空間，已填設計溫度 ${hasTemps} 個；指定場所低於 26°C 的空間 ${under} 個。上方全案溫度只是參考值，使用「套用」才會更新每筆空間。`;
+  }
+  window.updateScenarioBase=function(v){init();state.compliance.scenarioBaseTemp=v===''?'':Number(v);save();renderScenario()};
+  window.updateScenarioSlope=function(v){init();state.compliance.scenarioSlope=v===''?'':Number(v);save();renderScenario()};
+  window.applyProjectTemp=function(){const c=state.compliance||{},v=val(c.lawDefaultTemp);if(v===null||v<10||v>40){message('請輸入 10 至 40°C 的設計參考溫度');return;}state.rooms.forEach(r=>r.designTemp=v);save();renderScenario();message(`已將 ${v}°C 套用至 ${state.rooms.length} 個空間；原始負荷與機型未變更。`)};
+  renderCompliance=function(){let c=state.compliance||{};for(let k of ['lawScope','lawDefaultTemp','lawVenue','lawReviewer']){let el=$(k);if(el&&document.activeElement!==el)el.value=c[k]??'';}renderScenario();};
+  updateCompliance=function(k,v){state.compliance||={};state.compliance[k]=k==='lawDefaultTemp'?(v===''?'':Number(v)):v;save();renderCompliance();};
+  updateDesignTemp=function(id,v){let r=state.rooms.find(r=>r.id===id);if(!r)return;r.designTemp=v===''?'':Number(v);save();renderCompliance();};
+  renderCompliance();
+})();
+</script>
+</body></html>
